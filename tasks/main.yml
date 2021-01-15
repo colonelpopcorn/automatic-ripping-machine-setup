@@ -134,7 +134,7 @@
     repo: 'https://github.com/jswetzen/automatic-ripping-machine'
     dest: /opt/arm
     force: yes
-    umask: 775
+    umask: "0775"
     version: v2.1_dev
 
 - name: install pip dependencies
