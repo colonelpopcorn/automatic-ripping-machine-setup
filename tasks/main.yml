@@ -131,7 +131,7 @@
 
 - name: get A.R.M. from GitHub
   git:
-    repo: 'https://github.com/jswetzen/automatic-ripping-machine'
+    repo: 'https://github.com/automatic-ripping-machine/automatic-ripping-machine'
     dest: /opt/arm
     force: yes
     umask: "0775"
