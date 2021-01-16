@@ -155,6 +155,7 @@
   copy:
     src: /opt/arm/arm.yaml.sample
     dest: /opt/arm/arm.yaml
+    remote_src: yes
 
 - name: symlink arm config
   file:
