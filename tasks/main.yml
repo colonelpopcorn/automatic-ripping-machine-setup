@@ -133,6 +133,7 @@
   unarchive:
     src: 'https://github.com/automatic-ripping-machine/automatic-ripping-machine/archive/{{ arm_version }}.zip'
     dest: /opt/arm
+    creates: /opt/arm
     remote_src: yes
     mode: 0775
 
