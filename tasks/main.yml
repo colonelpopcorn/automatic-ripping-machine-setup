@@ -130,12 +130,11 @@
     append: yes
 
 - name: get A.R.M. from GitHub
-  git:
-    repo: 'https://github.com/automatic-ripping-machine/automatic-ripping-machine'
+  unarchive:
+    src: 'https://github.com/automatic-ripping-machine/automatic-ripping-machine/archive/{{ arm_version }}.zip'
     dest: /opt/arm
-    force: yes
-    umask: "0775"
-    version: v2.1_dev
+    remote_src: yes
+    mode: 0775
 
 - name: install pip dependencies
   pip:

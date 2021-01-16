@@ -3,6 +3,7 @@
 arm_setup_armpath: "/vagrant/Data/Media/Unidentified"
 arm_setup_rawpath: "/vagrant/Data/Raw"
 arm_setup_media_dir: "/vagrant/Data/Media/Movies"
+arm_version: "v2_master"
 arm_setup_cifs_user: ""
 arm_setup_cifs_password: ""
 arm_setup_cifs_path: ""
