@@ -105,6 +105,7 @@
       - libcurl4-openssl-dev
       - libssl-dev
       - cifs-utils
+      - unzip
     update_cache: yes
     state: present  
 
