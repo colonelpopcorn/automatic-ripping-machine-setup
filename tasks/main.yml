@@ -130,8 +130,13 @@
     append: yes
 
 - name: get A.R.M. from GitHub
-  unarchive:
+  get_url:
     src: 'https://github.com/automatic-ripping-machine/automatic-ripping-machine/archive/{{ arm_version }}.zip'
+    dest: /tmp/arm
+    
+- name: Unzip A.R.M.
+  unarchive:
+    src: '/tmp/arm'
     dest: /opt/arm
     creates: /opt/arm
     remote_src: yes
