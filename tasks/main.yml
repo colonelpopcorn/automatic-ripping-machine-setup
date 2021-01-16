@@ -135,7 +135,7 @@
     dest: /opt/arm
     force: yes
     umask: "0775"
-    version: v2.1_dev
+    version: v2_master
 
 - name: install pip dependencies
   pip:
