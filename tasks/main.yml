@@ -105,7 +105,6 @@
       - libcurl4-openssl-dev
       - libssl-dev
       - cifs-utils
-      - unzip
     update_cache: yes
     state: present  
 
@@ -131,21 +130,12 @@
     append: yes
 
 - name: get A.R.M. from GitHub
-  get_url:
-    url: 'https://github.com/automatic-ripping-machine/automatic-ripping-machine/archive/{{ arm_version }}.zip'
-    dest: /tmp/arm
-
-- name: Create A.R.M. directory
-  file:
-    path: /opt/arm
-    state: directory
-    
-- name: Unzip A.R.M.
-  unarchive:
-    src: '/tmp/arm'
+  git:
+    repo: 'https://github.com/automatic-ripping-machine/automatic-ripping-machine'
     dest: /opt/arm
-    remote_src: yes
-    mode: 0775
+    force: yes
+    umask: "0775"
+    version: v2.1_dev
 
 - name: install pip dependencies
   pip:
