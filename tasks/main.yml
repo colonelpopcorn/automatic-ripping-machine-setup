@@ -131,7 +131,7 @@
 
 - name: get A.R.M. from GitHub
   get_url:
-    src: 'https://github.com/automatic-ripping-machine/automatic-ripping-machine/archive/{{ arm_version }}.zip'
+    url: 'https://github.com/automatic-ripping-machine/automatic-ripping-machine/archive/{{ arm_version }}.zip'
     dest: /tmp/arm
     
 - name: Unzip A.R.M.
