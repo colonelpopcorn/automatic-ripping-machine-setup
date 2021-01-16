@@ -157,6 +157,11 @@
     dest: /opt/arm/arm.yaml
     remote_src: yes
 
+- name: Make etc/arm dir
+  file:
+    path: /etc/arm
+    state: directory
+
 - name: symlink arm config
   file:
     src: /opt/arm/arm.yaml
