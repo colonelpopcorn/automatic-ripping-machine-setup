@@ -133,12 +133,16 @@
   get_url:
     url: 'https://github.com/automatic-ripping-machine/automatic-ripping-machine/archive/{{ arm_version }}.zip'
     dest: /tmp/arm
+
+- name: Create A.R.M. directory
+  file:
+    path: /opt/arm
+    state: directory
     
 - name: Unzip A.R.M.
   unarchive:
     src: '/tmp/arm'
     dest: /opt/arm
-    creates: /opt/arm
     remote_src: yes
     mode: 0775
 
